@@ -39,7 +39,6 @@ public class RegistrationEndpoint {
 
     private static final Logger log = Logger.getLogger(RegistrationEndpoint.class.getName());
     private String gcmId;
-    private String friendId;
 
     /**
      * Register a device to the backend
@@ -48,13 +47,15 @@ public class RegistrationEndpoint {
      */
     @ApiMethod(name = "register")
     public void registerDevice(@Named("regId") String regId) {
-        gcmId = regId;
         if (findRecord(regId) != null) {
             log.info("Device " + regId + " already registered, skipping register");
+            RegistrationRecord record =findRecord(regId);
+            gcmId = record.getRegId();
             return;
         }
         RegistrationRecord record = new RegistrationRecord();
         record.setRegId(regId);
+        gcmId = regId;
         ofy().save().entity(record).now();
     }
 
@@ -112,8 +113,4 @@ public class RegistrationEndpoint {
         return record;
     }
 
-    @ApiMethod(name = "sendFriendId")
-    public void sendFriendId(@Named("friendId")String id){
-        this.friendId = id;
-    }
 }

@@ -48,8 +48,8 @@ public class SendNotification extends AsyncTask<Void, Void, String>{
         try {
             //msg = "Notification from Sample Application";
             notifyService.sendFriendId(friendId).execute();
-            //notifyService.sendLatitude(latitude).execute();
-            //notifyService.sendLongitude(longitude).execute();
+            notifyService.sendLatitude(latitude).execute();
+            notifyService.sendLongitude(longitude).execute();
             //friendRecord=notifyService.findRecord(friendId).execute();
             //notifyService.sendLatitude(latitude).execute();
             //notifyService.sendLongitude(longitude).execute();

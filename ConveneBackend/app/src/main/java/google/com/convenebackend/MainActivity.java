@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements  GoogleApiClient.
                 mGoogleApiClient);
         userLatitude = mLastLocation.getLatitude();
         userLongitude = mLastLocation.getLongitude();
-        new GcmRegistrationAsyncTask(this,"123",userLatitude,userLongitude).execute();
+        new GcmRegistrationAsyncTask(this,"456",userLatitude,userLongitude).execute();
     }
     @Override
     public void onConnectionSuspended(int i) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements  GoogleApiClient.
         userLatitude = mLastLocation.getLatitude();
         userLongitude = mLastLocation.getLongitude();
         friendId = "456";
-        senderId = "123";
+        senderId = "456";
         new SendNotification(this,friendId,"Notification from sample app",userLatitude,userLongitude,senderId).execute();
     }
 

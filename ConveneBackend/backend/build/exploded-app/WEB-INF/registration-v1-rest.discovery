@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/4gfCyzbIF46zCKAQfSXdf6oppYY\"",
+ "etag": "\"u_zXkMELIlX4ktyNbM2XKD4vK8E/z_e-ekcBi94TsBdNFSPX-jlb3D4\"",
  "discoveryVersion": "v1",
  "id": "registration:v1",
  "name": "registration",
@@ -129,24 +129,6 @@
    },
    "parameterOrder": [
     "regId"
-   ],
-   "scopes": [
-    "https://www.googleapis.com/auth/userinfo.email"
-   ]
-  },
-  "sendFriendId": {
-   "id": "registration.sendFriendId",
-   "path": "sendFriendId/{friendId}",
-   "httpMethod": "POST",
-   "parameters": {
-    "friendId": {
-     "type": "string",
-     "required": true,
-     "location": "path"
-    }
-   },
-   "parameterOrder": [
-    "friendId"
    ],
    "scopes": [
     "https://www.googleapis.com/auth/userinfo.email"

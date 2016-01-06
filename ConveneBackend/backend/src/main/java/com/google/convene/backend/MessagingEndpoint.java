@@ -48,8 +48,6 @@ public class MessagingEndpoint {
      */
     private static final String API_KEY = System.getProperty("gcm.api.key");
     private String friend_fb_id;
-    private double latitude;
-    private double longitude;
 
     public MessagingEndpoint() {
     }
